@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>json-translate for your i18n app</h1>
+        <textarea id="input" placeholder="Paste valid JSON"></textarea>
+        <textarea id="output" placeholder="translation.."></textarea><br>
+        <select id="sourceLang">
+            <option value="en">English</option>
+            <option value="auto">Detect language</option>
+        </select>
+        <span>&rarr;</span>
+        <select id="targetLang">
+            <option value="fr">French</option>
+            <option value="ar">Arabic</option>
+            <option value="es">Spanish</option>
+            <option value="zh-CN">Chinese</option>
+        </select>
+        <button onclick="app.translate();">Translate</button>
+        <a href="https://github.com/chrismcafee/json-translate">
+            <img src="./images/Octicons-git-branch.svg.png" alt="GitHub">
+        </a>
+        <script>
+            document.getElementById("input").placeholder = '{ "SAMPLE_KEY": "Sample value." }';
+            document.getElementById("output").placeholder = '{ "SAMPLE_KEY": "Valeur de l\'échantillon." }';
+        </script>
+
+        <script src="./js/json-translate/app.js"></script>
+    </body>
+<html>
