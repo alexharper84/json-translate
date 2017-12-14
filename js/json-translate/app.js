@@ -14,7 +14,7 @@ app.data = {
   api: function() {
     let sourceLanguage = app.data.sl();
     let targetLanguage = app.data.tl();
-    return 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=' 
+    return 'https://translate.googleapis.com/translate_a/single?client=gtx&sl='
             + sourceLanguage + '&tl=' + targetLanguage + '&dt=t&q=';
   }
 }
@@ -37,7 +37,7 @@ app.translate = function() {
       if (++processed === keys.length - 1) {
         document.getElementById('output').value = JSON.stringify(result, null, 4);
       }
-    }).catch(function(error) {;
+    }).catch(function(error) {
       document.getElementById('output').value = error;
     });
   });
