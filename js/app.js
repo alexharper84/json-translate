@@ -34,7 +34,7 @@ app.translate = function() {
                  .join('');
     }).then(function(translation) {
       result[key] = translation;
-      if (++processed === keys.length - 1) {
+      if (++processed === keys.length) {
         document.getElementById('output').value = JSON.stringify(result, null, 4);
       }
     }).catch(function(error) {
